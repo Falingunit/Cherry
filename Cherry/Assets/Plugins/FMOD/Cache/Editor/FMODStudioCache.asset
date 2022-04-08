@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7236121896215242927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/bullet time
+  m_EditorClassIdentifier: 
+  Path: snapshot:/bullet time
+  Guid:
+    Data1: 2075967282
+    Data2: 1287271199
+    Data3: -2043730522
+    Data4: 873114595
+  Banks:
+  - {fileID: 8162896671730253207}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-3801128803743881931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,34 @@ MonoBehaviour:
   Path: ../../../../Documents/FMOD Studio/Unity/Cherry/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637819387681562816
+  lastModified: 637850482923999801
   FileSizes:
   - Name: Desktop
-    Value: 762
+    Value: 1018
+  Exists: 1
+--- !u!114 &-818842146757120595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Choose Your Destiny/bullet time
+  m_EditorClassIdentifier: 
+  Name: bullet time
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1377416912
+    data2: 753195571
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -36,15 +87,18 @@ MonoBehaviour:
   - {fileID: -3801128803743881931}
   - {fileID: 8162896671730253207}
   EditorEvents:
-  - {fileID: 8094884680714336122}
+  - {fileID: 6929830028074992350}
+  - {fileID: 3332291358752831235}
+  - {fileID: -7236121896215242927}
+  - {fileID: 4465781844340218950}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8162896671730253207}
   StringsBanks:
   - {fileID: -3801128803743881931}
-  cacheTime: 637819387681562816
+  cacheTime: 637850482923999801
   cacheVersion: 10
---- !u!114 &8094884680714336122
+--- !u!114 &3332291358752831235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,23 +108,103 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/ch_1
+  m_Name: event:/Music/False Quietude
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/ch_1
+  Path: event:/Music/False Quietude
   Guid:
-    Data1: -1691696087
-    Data2: 1229681507
-    Data3: -1160582477
-    Data4: -1614434515
+    Data1: 279159068
+    Data2: 1098046328
+    Data3: 1485008828
+    Data4: 1269073110
   Banks:
   - {fileID: 8162896671730253207}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 7349886873694858927}
   MinDistance: 1
   MaxDistance: 20
-  Length: 45000
+  Length: 164570
+--- !u!114 &4465781844340218950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/pitch
+  m_EditorClassIdentifier: 
+  Path: snapshot:/pitch
+  Guid:
+    Data1: -2126242387
+    Data2: 1171826794
+    Data3: -1996547175
+    Data4: 646300268
+  Banks:
+  - {fileID: 8162896671730253207}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6929830028074992350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Choose Your Destiny
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Choose Your Destiny
+  Guid:
+    Data1: 226298898
+    Data2: 1338045118
+    Data3: 1545826437
+    Data4: 808456528
+  Banks:
+  - {fileID: 8162896671730253207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -818842146757120595}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 168658
+--- !u!114 &7349886873694858927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/False Quietude/bullet time
+  m_EditorClassIdentifier: 
+  Name: bullet time
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1377416912
+    data2: 753195571
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8162896671730253207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +220,8 @@ MonoBehaviour:
   Path: ../../../../Documents/FMOD Studio/Unity/Cherry/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637819387681512842
+  lastModified: 637850482922765751
   FileSizes:
   - Name: Desktop
-    Value: 672224
+    Value: 4590240
   Exists: 1

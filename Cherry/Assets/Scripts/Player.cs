@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Range(0, 50)] public float speed = 7;
+    [Range(0, 50)] public float jumpVel = 5;
 
-    [SerializeField] private float speed = 7, jumpVel = 5;
+    public float fallMultiplier = 2.5f;
+    public float slowJumpMultiplier = 2f;
+
+    public float wallJumpHorizontal, wallJumpVertical;
 
     private Rigidbody2D rigidbody;
     private BoxCollider2D boxCollider;
     private SpriteRenderer spriteRenderer;
 
     private float dirX;
+
     private bool isLanded = false;
 
 
@@ -26,6 +32,8 @@ public class Player : MonoBehaviour
     {
 
         PlayerMovement();
+        PlayerJumping();
+        PlayerGrabbing();
         AnimationController();
 
         if (Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, LayerMask.GetMask("Ground")))
@@ -52,16 +60,32 @@ public class Player : MonoBehaviour
 
     private void PlayerMovement()
     {
-        //Horizontal Movement
         dirX = Input.GetAxisRaw("Horizontal");
 
-        rigidbody.velocity = new Vector2(dirX * speed, rigidbody.velocity.y); ;
+        rigidbody.velocity = new Vector2(dirX * speed, rigidbody.velocity.y);
 
-        //Jumping
+    }
+
+    private void PlayerJumping()
+    {
+
         if (Input.GetButtonDown("Jump") && isLanded)
         {
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpVel);
+            rigidbody.velocity = Vector2.up * jumpVel;
         }
+
+        if (rigidbody.velocity.y < 0)
+        {
+            rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }else if (rigidbody.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (slowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
+    }
+
+    private void PlayerGrabbing()
+    {
 
     }
 
