@@ -4,89 +4,34 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [Range(0, 50)] public float speed = 7;
-    [Range(0, 50)] public float jumpVel = 5;
 
-    public float fallMultiplier = 2.5f;
-    public float slowJumpMultiplier = 2f;
+    public CharacterController2D controller;
 
-    public float wallJumpHorizontal, wallJumpVertical;
+    [SerializeField] float speed = 7f;
 
-    private Rigidbody2D rigidbody;
-    private BoxCollider2D boxCollider;
-    private SpriteRenderer spriteRenderer;
-
-    private float dirX;
-
-    private bool isLanded = false;
-
-
-    private void Start()
-    {
-        rigidbody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    private float dirX = 0f;
+    private bool isJumping = false;
 
     private void Update()
     {
-
-        PlayerMovement();
-        PlayerJumping();
-        PlayerGrabbing();
-        AnimationController();
-
-        if (Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, LayerMask.GetMask("Ground")))
+        dirX = Input.GetAxisRaw("Horizontal") * speed;
+        
+        if (Input.GetButtonDown("Jump"))
         {
-            isLanded = true;
+            isJumping = true;
         }
-        else 
-        { 
-            isLanded = false;
-        }
-
     }
 
-    private void AnimationController()
+    private void FixedUpdate()
     {
-        if (dirX > .1f)
-        {
-            spriteRenderer.flipX = false;
-        }else if (dirX < -.1f)
-        {
-            spriteRenderer.flipX = true;
-        }
+        PlayerMovement();
     }
 
     private void PlayerMovement()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
 
-        rigidbody.velocity = new Vector2(dirX * speed, rigidbody.velocity.y);
-
-    }
-
-    private void PlayerJumping()
-    {
-
-        if (Input.GetButtonDown("Jump") && isLanded)
-        {
-            rigidbody.velocity = Vector2.up * jumpVel;
-        }
-
-        if (rigidbody.velocity.y < 0)
-        {
-            rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }else if (rigidbody.velocity.y > 0 && !Input.GetButton("Jump"))
-        {
-            rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (slowJumpMultiplier - 1) * Time.deltaTime;
-        }
+        controller.Move(dirX * Time.fixedDeltaTime, false, isJumping);
+        isJumping = false;
 
     }
-
-    private void PlayerGrabbing()
-    {
-
-    }
-
 }
