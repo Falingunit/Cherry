@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7958949498629924662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Crystaline Night/Layer 1
+  m_EditorClassIdentifier: 
+  Name: Layer 1
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 241321656
+    data2: 1754988144
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7236121896215242927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +51,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6815878173333163742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Crystaline Night/Layer 3
+  m_EditorClassIdentifier: 
+  Name: Layer 3
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3357261731
+    data2: 2259495639
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3801128803743881931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +90,34 @@ MonoBehaviour:
   Path: ../../../../Documents/FMOD Studio/Unity/Cherry/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637850482923999801
+  lastModified: 637865023995942323
   FileSizes:
   - Name: Desktop
-    Value: 1018
+    Value: 1298
+  Exists: 1
+--- !u!114 &-2621303822749061901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Crystaline Night/Layer 2
+  m_EditorClassIdentifier: 
+  Name: Layer 2
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 723967045
+    data2: 510927831
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-818842146757120595
 MonoBehaviour:
@@ -91,13 +163,38 @@ MonoBehaviour:
   - {fileID: 3332291358752831235}
   - {fileID: -7236121896215242927}
   - {fileID: 4465781844340218950}
+  - {fileID: 8238590602009294222}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8162896671730253207}
   StringsBanks:
   - {fileID: -3801128803743881931}
-  cacheTime: 637850482923999801
+  cacheTime: 637865023995942323
   cacheVersion: 10
+--- !u!114 &626022098562384725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Crystaline Night/Layer 4
+  m_EditorClassIdentifier: 
+  Name: Layer 4
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2241150984
+    data2: 2958180793
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3332291358752831235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +250,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &5379722957445927358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Crystaline Night/Synth
+  m_EditorClassIdentifier: 
+  Name: Synth
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 285021506
+    data2: 1130584041
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6929830028074992350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,8 +341,40 @@ MonoBehaviour:
   Path: ../../../../Documents/FMOD Studio/Unity/Cherry/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637850482922765751
+  lastModified: 637865023995791110
   FileSizes:
   - Name: Desktop
-    Value: 4590240
+    Value: 5930240
   Exists: 1
+--- !u!114 &8238590602009294222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Crystaline Night
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Crystaline Night
+  Guid:
+    Data1: -2029476876
+    Data2: 1283387456
+    Data3: -516539732
+    Data4: 261669322
+  Banks:
+  - {fileID: 8162896671730253207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2621303822749061901}
+  - {fileID: -6815878173333163742}
+  - {fileID: 5379722957445927358}
+  - {fileID: 626022098562384725}
+  - {fileID: -7958949498629924662}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 21363
